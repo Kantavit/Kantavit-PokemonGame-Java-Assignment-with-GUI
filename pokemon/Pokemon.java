@@ -2,15 +2,18 @@ public abstract class Pokemon{
     private String name;
     private String type;
     private String gender;
+    private String image;
     protected int hp;
     
     public Pokemon(String name){
         this.name = name;
         this.hp = 0;
         this.type = null;
+        this.gender = null;
+        this.image = null;
     }
 
-    public Pokemon(String name, int maxHp, String type){
+    public Pokemon(String name, int maxHp, String type, String image){
         this.name = name;
         this.hp = (int)(Math.random() * maxHp);
         this.type = type;
@@ -18,6 +21,8 @@ public abstract class Pokemon{
         String[] randomGender = {"Male", "Female"};
         int index = (int)(Math.random() * 2);
         this.gender = randomGender[index];
+
+        this.image = image;
     }
 
     public String getName(){
@@ -38,6 +43,10 @@ public abstract class Pokemon{
 
     public String getGender(){
         return gender;
+    }
+
+    public String getIMAGE(){
+        return image;
     }
 
     public boolean damage(int value){

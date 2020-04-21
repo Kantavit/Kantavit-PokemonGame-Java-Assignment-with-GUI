@@ -2,7 +2,7 @@ import java.math.*;
 
 public class Gyarados extends Koiking{
     public Gyarados(String name){
-        super(name, 100, "Water");
+        super(name, 100, "Water", "Gyarados.jpg");
     }
 
     public void attack(Pokemon enemy){

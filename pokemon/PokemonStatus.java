@@ -4,6 +4,7 @@ import java.awt.event.*;
 
 public class PokemonStatus extends JFrame{
     Pokemon pokemon;
+
     public PokemonStatus(Pokemon pokemon){
         super("Pokemon Status: " + pokemon.getName());
         this.pokemon = pokemon;
@@ -14,6 +15,13 @@ public class PokemonStatus extends JFrame{
         JLabel type = new JLabel("Type: " + pokemon.getType());
         JLabel gender = new JLabel("Gender: " + pokemon.getGender());
 
+        ImageIcon image = new ImageIcon(pokemon.getIMAGE());
+        Image img = image.getImage().getScaledInstance(120, 120, java.awt.Image.SCALE_SMOOTH);
+        ImageIcon newImg = new ImageIcon(img);
+        JLabel pokeImage = new JLabel(newImg);
+        //Bugs_Stalin.jpg
+
+        c.add(pokeImage);
         c.add(name);
         c.add(hp);
         c.add(type);
@@ -21,7 +29,7 @@ public class PokemonStatus extends JFrame{
 
         c.setLayout(new BoxLayout(c, BoxLayout.Y_AXIS));
         // setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(400, 200);
+        setSize(350, 250);
         setVisible(true);
     }
 

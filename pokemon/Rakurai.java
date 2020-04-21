@@ -2,11 +2,11 @@ import java.math.*;
 
 public class Rakurai extends Pokemon{
     public Rakurai(String name){
-        super(name, 50, "Electric");
+        super(name, 50, "Electric", "Rakurai.jpg");
     }
 
-    public Rakurai(String name, int maxHp, String type){
-        super(name, maxHp, type);
+    public Rakurai(String name, int maxHp, String type, String image){
+        super(name, maxHp, type, image);
     }
 
     public void attack(Pokemon enemy){

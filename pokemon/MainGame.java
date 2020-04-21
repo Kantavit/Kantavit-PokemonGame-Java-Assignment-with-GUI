@@ -23,7 +23,7 @@ public class MainGame extends JFrame{
         c.add(firstPokemon);
 
         c.setLayout(new BoxLayout(c, BoxLayout.Y_AXIS));
-
+        
         String pokeName = "Pokemon: ";
         for(Pokemon p: trainer.getBagOfPokemon()){
             pokeName += p.getName() + ", ";

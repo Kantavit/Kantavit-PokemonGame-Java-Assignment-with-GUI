@@ -2,7 +2,7 @@ import java.math.*;
 
 public class Livolt extends Rakurai{
     public Livolt(String name){
-        super(name, 85, "Electric");
+        super(name, 85, "Electric", "Livolt.jpg");
     }
 
     public void attack(Pokemon enemy){

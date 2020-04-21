@@ -2,11 +2,11 @@ import java.math.*;
 
 public class Ekans extends Pokemon{
     public Ekans(String name){
-        super(name, 40, "Poison");
+        super(name, 40, "Poison", "Ekans.jpg");
     }
 
-    public Ekans(String name, int maxHp, String type){
-        super(name, maxHp, type);
+    public Ekans(String name, int maxHp, String type, String image){
+        super(name, maxHp, type, image);
     }
 
     public void attack(Pokemon enemy){
