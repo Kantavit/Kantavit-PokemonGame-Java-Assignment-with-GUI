@@ -119,8 +119,7 @@ public class Trainer{
     }
 
     public void feedPokemon(){
-        int BerryNo = 0;
-        int PokeNo = 0;
+        int no = 0;
 
         System.out.println("\n\nFeed pokemons");
         System.out.println("Select Berry in bag(num): ");
@@ -131,30 +130,46 @@ public class Trainer{
         }
 
         printBerry(bagOfBerry);
-        BerryNo = sc.nextInt();
-        if(BerryNo < 0){
+        no = sc.nextInt();
+        if(no < 0){
             sc.nextLine();
             return;
         }
-        Berry myBerry = bagOfBerry.get(BerryNo);
+        Berry myBerry = bagOfBerry.get(no);
 
         System.out.println("\n\nPokemon in bag: ");
         printPokemon(bagOfPokemon);
         System.out.println("Select Pokemon in bag(num): ");
 
-        PokeNo = sc.nextInt();
+        no = sc.nextInt();
         sc.nextLine();
-        Pokemon myPokemon = bagOfPokemon.get(PokeNo);
+        Pokemon myPokemon = bagOfPokemon.get(no);
 
         myBerry.heal(myPokemon);
-        bagOfBerry.remove(BerryNo);
+        bagOfBerry.remove(myBerry);
     }
 
     public void harvestBerry(){
-        System.out.println("Harvest berries");
-        ArrayList<Pokemon> berries = BerryRandomizer.getBerries(3);
-        
+        int no = 0;
 
+        System.out.println("Harvest berries");
+        ArrayList<Berry> berries = BerryRandomizer.getBerries(3);
+        
+        System.out.println("\n\nBerries around you: ");
+        printBerry(berries);
+
+        System.out.println("\n\nSelect Berries around you(num)");
+        no = sc.nextInt();
+        if(no < 0){
+            sc.nextLine();
+            return;
+        }
+        sc.nextLine();
+
+        Berry newBerry = berries.get(no);
+        bagOfBerry.add(newBerry);
+
+        System.out.println("You harvest " + newBerry.getName() + " !");
     }
 
     public ArrayList<Pokemon> getBagOfPokemon(){
