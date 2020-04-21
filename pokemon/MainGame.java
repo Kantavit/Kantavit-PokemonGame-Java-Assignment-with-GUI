@@ -10,7 +10,10 @@ public class MainGame extends JFrame{
         this.trainer = trainer;
 
         Container c = getContentPane();
-        JLabel trainerNameLabel = new JLabel(this.trainer.getName());
+        JLabel trainerNameLabel = new JLabel();
+        String playName = "Player: " + this.trainer.getName();
+        trainerNameLabel.setText(playName);
+
         JLabel pokemonName = new JLabel();
 
         JButton firstPokemon = new JButton(trainer.getBagOfPokemon().get(0).getName() + " Status");
@@ -21,11 +24,11 @@ public class MainGame extends JFrame{
 
         c.setLayout(new BoxLayout(c, BoxLayout.Y_AXIS));
 
-        String pName = "Pokemon: ";
+        String pokeName = "Pokemon: ";
         for(Pokemon p: trainer.getBagOfPokemon()){
-            pName += p.getName() + ", ";
+            pokeName += p.getName() + ", ";
         }
-        pokemonName.setText(pName);
+        pokemonName.setText(pokeName);
 
         firstPokemon.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
