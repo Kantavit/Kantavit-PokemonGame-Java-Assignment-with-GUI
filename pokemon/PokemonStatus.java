@@ -19,7 +19,6 @@ public class PokemonStatus extends JFrame{
         Image img = image.getImage().getScaledInstance(120, 120, java.awt.Image.SCALE_SMOOTH);
         ImageIcon newImg = new ImageIcon(img);
         JLabel pokeImage = new JLabel(newImg);
-        //Bugs_Stalin.jpg
 
         c.add(pokeImage);
         c.add(name);
@@ -32,5 +31,4 @@ public class PokemonStatus extends JFrame{
         setSize(350, 250);
         setVisible(true);
     }
-
 }

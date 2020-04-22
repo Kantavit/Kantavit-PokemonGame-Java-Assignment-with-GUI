@@ -6,13 +6,31 @@ public class Trainer{
     private Scanner sc;
     private String name;
 
+    private ArrayList<Pokemon> AllPokemonInGame;
+    private ArrayList<Berry> AllBerryInGame;
+
     public Trainer(String name){
+        // add pokemon and berry to player
         bagOfPokemon = new ArrayList<Pokemon>();
         bagOfPokemon.add(new Koiking("My Koiking"));
 
         bagOfBerry = new ArrayList<Berry>();
         bagOfBerry.add(new LeppaBerry("Leppa Berry"));
         bagOfBerry.add(new LeppaBerry("Leppa Berry"));
+
+        // add all pokemon and berry to index
+        AllPokemonInGame = new ArrayList<Pokemon>();
+        AllPokemonInGame.add(new Koiking("Koiking"));
+        AllPokemonInGame.add(new Gyarados("Gyarados"));
+        AllPokemonInGame.add(new Rakurai("Rakurai"));
+        AllPokemonInGame.add(new Livolt("Livolt"));
+        AllPokemonInGame.add(new Ekans("Ekans"));
+        AllPokemonInGame.add(new Arbok("Arbok"));
+
+        AllBerryInGame = new ArrayList<Berry>();
+        AllBerryInGame.add(new LeppaBerry("Leppa Berry"));
+        AllBerryInGame.add(new OranBerry("Oran Berry"));
+        AllBerryInGame.add(new SitrusBerry("Sitrus Berry"));
 
         sc = new Scanner(System.in);
         this.name = name;
@@ -178,5 +196,13 @@ public class Trainer{
 
     public ArrayList<Berry> getBagOfBerry(){
         return bagOfBerry;
+    }
+
+    public ArrayList<Pokemon> getAllPokemonInGame(){
+        return AllPokemonInGame;
+    }
+
+    public ArrayList<Berry> getAllBerryInGame(){
+        return AllBerryInGame;
     }
 }

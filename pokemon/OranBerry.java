@@ -2,7 +2,7 @@ import java.math.*;
 
 public class OranBerry extends Berry{
     public OranBerry(String name){
-        super(name, 30);
+        super(name, 30, "OranBerry.jpg");
     }
 
     public void heal(Pokemon pokemon){
