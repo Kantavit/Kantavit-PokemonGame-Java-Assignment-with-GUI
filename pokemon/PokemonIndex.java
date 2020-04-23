@@ -20,7 +20,7 @@ public class PokemonIndex extends JFrame{
         JPanel panel = new JPanel();
 
         int i = 0;
-        for(i = 0; i < 6; i++){
+        for(i = 0; i < pokemon.size(); i++){
             ImageIcon image = new ImageIcon(pokemon.get(i).getIMAGE());
             Image img = image.getImage().getScaledInstance(120, 120, java.awt.Image.SCALE_SMOOTH);
             ImageIcon pokeImg = new ImageIcon(img);

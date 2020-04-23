@@ -6,9 +6,6 @@ import java.util.ArrayList;
 public class MainGame extends JFrame{
     private Trainer trainer;
 
-    // ArrayList<Pokemon> pokemon = trainer.getAllPokemonInGame();
-    // ArrayList<Berry> berry = trainer.getAllBerryInGame();
-
     public MainGame(Trainer trainer){
         super("Pokemon Game");
         this.trainer = trainer;
@@ -18,15 +15,17 @@ public class MainGame extends JFrame{
         JLabel pokemonName = new JLabel();
 
         JButton firstPokemon = new JButton(trainer.getBagOfPokemon().get(0).getName() + " Status");
-        JButton pokemonIndex = new JButton("All Pokemon Index in game");
-        JButton berryIndex = new JButton("All Berry Index in game");
+        JButton feedPokemon = new JButton("Feed pokemon");
+        JButton pokemonIndex = new JButton("All Pokemon Data in game");
+        JButton berryIndex = new JButton("All Berry Data in game");
 
-        JLabel separator = new JLabel("________________________________");
+        JLabel separator = new JLabel("____________________________________________");
         JLabel blank = new JLabel(" ");
 
         c.add(trainerNameLabel);
         c.add(pokemonName);
         c.add(firstPokemon);
+        c.add(feedPokemon);
         c.add(separator);
         c.add(blank);
         c.add(pokemonIndex); 
@@ -46,6 +45,12 @@ public class MainGame extends JFrame{
             }
         });
 
+        feedPokemon.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                FeedPokemon fp = new FeedPokemon(trainer.getBagOfBerry());
+            }
+        });
+
         pokemonIndex.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 PokemonIndex pi = new PokemonIndex(trainer.getAllPokemonInGame());
@@ -59,7 +64,7 @@ public class MainGame extends JFrame{
         });
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(400, 200);
+        setSize(280, 225);
         setVisible(true);
 
     }

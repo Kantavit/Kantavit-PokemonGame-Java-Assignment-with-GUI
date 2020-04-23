@@ -16,7 +16,7 @@ public class Trainer{
 
         bagOfBerry = new ArrayList<Berry>();
         bagOfBerry.add(new LeppaBerry("Leppa Berry"));
-        bagOfBerry.add(new LeppaBerry("Leppa Berry"));
+        bagOfBerry.add(new OranBerry("Oran Berry"));
 
         // add all pokemon and berry to index
         AllPokemonInGame = new ArrayList<Pokemon>();
