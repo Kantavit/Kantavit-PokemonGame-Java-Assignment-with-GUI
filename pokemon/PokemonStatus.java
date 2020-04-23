@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class PokemonStatus extends JFrame{
-    Pokemon pokemon;
+    private Pokemon pokemon;
 
     public PokemonStatus(Pokemon pokemon){
         super("Pokemon Status: " + pokemon.getName());

@@ -4,14 +4,11 @@ import java.awt.event.*;
 import java.util.ArrayList;
 
 public class FeedPokemon extends JFrame{
-    ArrayList<Berry> berry;
-
-    private String[] name;
-    private int[] healPoints;
-    private String[] image;
+    private ArrayList<Berry> berry;
+    protected Trainer trainer;
 
     public FeedPokemon(ArrayList<Berry> berry){
-        super("Feed Pokemon");
+        super("Choose Berry");
         this.berry = berry;
 
         Container c = getContentPane();
@@ -38,30 +35,29 @@ public class FeedPokemon extends JFrame{
             p3.add(new JLabel(berryImg));
         }
 
-        JButton feedButton1 = new JButton("Feed");
-        JButton feedButton2 = new JButton("Feed");
-        p2.add(feedButton1);
+        JButton chooseButton1 = new JButton("Choose");
+        JButton chooseButton2 = new JButton("Choose");
+        p2.add(chooseButton1);
         p2.add(new JLabel("     "));
-        p2.add(feedButton2);
+        p2.add(chooseButton2);
 
         c.add(p3, BorderLayout.WEST);
         c.add(p1, BorderLayout.CENTER);
         c.add(p2, BorderLayout.EAST);
 
-        feedButton1.addActionListener(new ActionListener(){
+        chooseButton1.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                // healing(pokemon, 20);
+                ChoosePokemonToFeed cpf1 = new ChoosePokemonToFeed(trainer.getBagOfPokemon(), trainer.getBagOfBerry().get(0));
             }
         });
 
-        feedButton2.addActionListener(new ActionListener(){
+        chooseButton2.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                // healing(pokemon, 30);
+                ChoosePokemonToFeed cpf2 = new ChoosePokemonToFeed(trainer.getBagOfPokemon(), trainer.getBagOfBerry().get(1));
             }
         });
 
-        pack();
-        // setSize(400, 400);
+        setSize(275, 120);
         setVisible(true);
     }
 }

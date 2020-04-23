@@ -4,17 +4,13 @@ import java.awt.event.*;
 import java.util.ArrayList;
 
 public class BerryIndex extends JFrame{
-    ArrayList<Berry> berry;
-
-    private String[] name;
-    private int[] healPoints;
-    private String[] image;
+    private ArrayList<Berry> berry;
 
     public BerryIndex(ArrayList<Berry> berry){
         super("All Berry Index");
         this.berry = berry;
 
-        setBounds(100, 100, 432, 195);
+        setBounds(100, 100, 432, 150);
         JPanel panel = new JPanel();
 
         int i = 0;

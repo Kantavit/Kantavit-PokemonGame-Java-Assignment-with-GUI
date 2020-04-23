@@ -4,13 +4,7 @@ import java.awt.event.*;
 import java.util.ArrayList;
 
 public class PokemonIndex extends JFrame{
-    ArrayList<Pokemon> pokemon;
-
-    private String[] name;
-    private int[] hp;
-    private String[] type;
-    private String[] gender;
-    private String[] image;
+    private ArrayList<Pokemon> pokemon;
 
     public PokemonIndex(ArrayList<Pokemon> pokemon){
         super("All Pokemon Index");
