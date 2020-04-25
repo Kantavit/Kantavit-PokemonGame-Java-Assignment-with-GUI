@@ -8,14 +8,17 @@ public class RenamePokemon extends JFrame{
 
     public RenamePokemon(Pokemon pokemon){
         super("Rename Pokemon");
+        this.pokemon = pokemon;
 
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
 
         JLabel label = new JLabel("Rename Pokemon:");
         textField = new JTextField(25); // 25 chars wide
+        JLabel info = new JLabel("press 'ENTER' to confirm");
         c.add(label);
         c.add(textField);
+        c.add(info);
 
         textField.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){

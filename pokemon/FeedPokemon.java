@@ -5,7 +5,6 @@ import java.util.ArrayList;
 
 public class FeedPokemon extends JFrame{
     private ArrayList<Berry> berry;
-    protected Trainer trainer;
 
     public FeedPokemon(ArrayList<Berry> berry){
         super("Choose Berry");
@@ -47,13 +46,13 @@ public class FeedPokemon extends JFrame{
 
         chooseButton1.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                ChoosePokemonToFeed cpf1 = new ChoosePokemonToFeed(trainer.getBagOfPokemon(), trainer.getBagOfBerry().get(0));
+                ChoosePokemonToFeed cpf1 = new ChoosePokemonToFeed(berry.get(0));
             }
         });
 
         chooseButton2.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                ChoosePokemonToFeed cpf2 = new ChoosePokemonToFeed(trainer.getBagOfPokemon(), trainer.getBagOfBerry().get(1));
+                ChoosePokemonToFeed cpf2 = new ChoosePokemonToFeed(berry.get(1));
             }
         });
 
