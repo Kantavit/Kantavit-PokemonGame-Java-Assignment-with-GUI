@@ -13,8 +13,8 @@ public class MainGame extends JFrame{
         JLabel trainerNameLabel = new JLabel("Player: " + this.trainer.getName());
         JLabel pokemonName = new JLabel();
 
-        JButton firstPokemon = new JButton(trainer.getBagOfPokemon().get(0).getName() + " Status");
-        JButton feedPokemon = new JButton("Feed pokemon");
+        JButton firstPokemon = new JButton("Pokemon in bag status");
+        JButton feedPokemon = new JButton("Feed Pokemon");
         JButton pokemonIndex = new JButton("All Pokemon Data in game");
         JButton berryIndex = new JButton("All Berry Data in game");
 
@@ -40,13 +40,13 @@ public class MainGame extends JFrame{
 
         firstPokemon.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                PokemonStatus ps = new PokemonStatus(trainer.getBagOfPokemon().get(0));
+                PokemonStatus ps = new PokemonStatus(trainer.getBagOfPokemon());
             }
         });
 
         feedPokemon.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                FeedPokemon fp = new FeedPokemon(trainer.getBagOfBerry());
+                FeedPokemon fp = new FeedPokemon(trainer.getBagOfPokemon(), trainer.getBagOfBerry());
             }
         });
 

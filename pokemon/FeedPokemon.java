@@ -4,10 +4,12 @@ import java.awt.event.*;
 import java.util.ArrayList;
 
 public class FeedPokemon extends JFrame{
+    private ArrayList<Pokemon> pokemon;
     private ArrayList<Berry> berry;
 
-    public FeedPokemon(ArrayList<Berry> berry){
+    public FeedPokemon(ArrayList<Pokemon> pokemon, ArrayList<Berry> berry){
         super("Choose Berry");
+        this.pokemon = pokemon;
         this.berry = berry;
 
         Container c = getContentPane();
@@ -46,13 +48,15 @@ public class FeedPokemon extends JFrame{
 
         chooseButton1.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                ChoosePokemonToFeed cpf1 = new ChoosePokemonToFeed(berry.get(0));
+                ChoosePokemonToFeed cpf1 = new ChoosePokemonToFeed(pokemon, berry.get(0));
+                // c.remove(chooseButton1);
             }
         });
 
         chooseButton2.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                ChoosePokemonToFeed cpf2 = new ChoosePokemonToFeed(berry.get(1));
+                ChoosePokemonToFeed cpf2 = new ChoosePokemonToFeed(pokemon, berry.get(1));
+                // c.remove(chooseButton2);
             }
         });
 
