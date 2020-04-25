@@ -12,22 +12,21 @@ public class ChoosePokemonToFeed extends JFrame{
         this.pokemon = pokemon;
         this.berry = berry;
         
-        try{
-            Container c = getContentPane();
-            JPanel p1 = new JPanel();
-            JPanel p2 = new JPanel();
-            JPanel p3 = new JPanel();
-            p1.setLayout(new BoxLayout(p1, BoxLayout.Y_AXIS));
-            p2.setLayout(new BoxLayout(p2, BoxLayout.Y_AXIS));
-            p3.setLayout(new BoxLayout(p3, BoxLayout.Y_AXIS));
+        Container c = getContentPane();
+        JPanel p1 = new JPanel();
+        JPanel p2 = new JPanel();
+        JPanel p3 = new JPanel();
+        p1.setLayout(new BoxLayout(p1, BoxLayout.Y_AXIS));
+        p2.setLayout(new BoxLayout(p2, BoxLayout.Y_AXIS));
+        p3.setLayout(new BoxLayout(p3, BoxLayout.Y_AXIS));
 
+        try{
             int i = 0;
-        
             for(i = 0; i < pokemon.size(); i++){
-                JLabel hp = new JLabel("HP: " + pokemon.get(i).getName());
+                JLabel hp = new JLabel("HP: " + pokemon.get(i).getHp());
 
                 ImageIcon image = new ImageIcon(pokemon.get(i).getIMAGE());
-                Image img = image.getImage().getScaledInstance(40, 40, java.awt.Image.SCALE_SMOOTH);
+                Image img = image.getImage().getScaledInstance(60, 60, java.awt.Image.SCALE_SMOOTH);
                 ImageIcon pokemonImg = new ImageIcon(img);
 
                 p1.add(hp);
@@ -49,7 +48,7 @@ public class ChoosePokemonToFeed extends JFrame{
             });
 
         }catch(java.lang.NullPointerException exception){
-            System.out.println("NullPointerException ERROR");
+            System.out.println("Null Pointer Exception (ERROR)");
         }
         
         setSize(350, 250);
