@@ -20,13 +20,23 @@ public class PokemonStatus extends JFrame{
         ImageIcon newImg = new ImageIcon(img);
         JLabel pokeImage = new JLabel(newImg);
 
+        JButton rename = new JButton("Rename " + pokemon.getName());
+
         c.add(pokeImage);
         c.add(name);
         c.add(hp);
         c.add(type);
         c.add(gender);
+        c.add(rename);
 
         c.setLayout(new BoxLayout(c, BoxLayout.Y_AXIS));
+
+        rename.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                RenamePokemon rp = new RenamePokemon(pokemon);
+            }
+        });
+
         // setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(350, 250);
         setVisible(true);

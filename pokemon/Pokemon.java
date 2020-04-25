@@ -33,6 +33,10 @@ public abstract class Pokemon{
         return hp;
     }
 
+    public void setName(String newName){
+        this.name =  newName;
+    }
+
     public void setHp(int newHp){
         this.hp = newHp;
     }
