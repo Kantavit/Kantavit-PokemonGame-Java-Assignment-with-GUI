@@ -32,6 +32,7 @@ public class BerryIndex extends JFrame{
         
         JScrollPane scroll = new JScrollPane(panel);
         getContentPane().add(scroll, BorderLayout.CENTER);
+        setLocationRelativeTo(panel);
         setVisible(true);
     }
 }

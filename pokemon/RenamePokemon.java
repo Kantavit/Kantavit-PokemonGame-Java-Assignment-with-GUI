@@ -30,6 +30,7 @@ public class RenamePokemon extends JFrame{
 
         // setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(500, 100);
+        setLocationRelativeTo(c);
         setVisible(true);
     }
 }

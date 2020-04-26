@@ -52,6 +52,7 @@ public class ChoosePokemonToFeed extends JFrame{
         }
         
         setSize(350, 250);
+        setLocationRelativeTo(c);
         setVisible(true);
     }
 }

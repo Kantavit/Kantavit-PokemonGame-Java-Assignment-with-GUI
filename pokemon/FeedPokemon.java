@@ -69,6 +69,7 @@ public class FeedPokemon extends JFrame{
         }
 
         setSize(275, 120);
+        setLocationRelativeTo(c);
         setVisible(true);
     }
 }

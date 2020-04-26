@@ -64,6 +64,7 @@ public class MainGame extends JFrame{
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(280, 225);
+        setLocationRelativeTo(null);
         setVisible(true);
 
     }

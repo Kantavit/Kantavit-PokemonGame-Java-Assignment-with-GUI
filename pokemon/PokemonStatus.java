@@ -48,6 +48,7 @@ public class PokemonStatus extends JFrame{
         }
         // setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(350, 250);
+        setLocationRelativeTo(c);
         setVisible(true);
     }
 }
